@@ -3,102 +3,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ofertas Relâmpago — Achados e descontos da Amazon</title>
-  <meta name="description" content="Selecionamos diariamente os melhores descontos da Amazon Brasil em eletrônicos, áudio e tecnologia. Curadoria de ofertas com economia de verdade." />
+  <title>JotaPromos — Os melhores descontos da Amazon</title>
+  <meta name="description" content="JotaPromos: curadoria diária dos melhores descontos da Amazon Brasil em eletrônicos, áudio e tecnologia. Economia de verdade, sem complicação." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="topbar">
+    <strong>Ofertas selecionadas todos os dias</strong> — economize de verdade na Amazon.
+    <a class="red" href="#telegram">Entre no nosso Telegram &rarr;</a>
+  </div>
+
   <header class="site">
     <div class="container">
-      <div class="brand">Ofertas <span>Relâmpago</span></div>
-      <nav>
-        <a href="index.html">Início</a>
+      <div class="brand">Jota<b>Promos</b></div>
+      <nav class="main">
+        <a href="index.html" class="active">Início</a>
         <a href="sobre.html">Sobre</a>
+        <!-- TODO: troque o # pelo link do seu canal (ex: https://t.me/seucanal) -->
+        <a class="tg-btn" href="#" id="telegram">Telegram</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
+
+    <!-- Hero -->
     <section class="hero">
-      <h1>Os melhores descontos da Amazon, garimpados para você</h1>
-      <p>
-        Todos os dias procuramos as promoções com economia de verdade em eletrônicos,
-        áudio e tecnologia na Amazon Brasil. Aqui você encontra a nossa curadoria — sem
-        perder tempo caçando oferta boa.
-      </p>
-      <!-- TODO: troque o # pelo link do seu canal do Telegram (ex: https://t.me/seucanal) -->
-      <a class="btn green" href="#">Receba as ofertas no Telegram</a>
+      <div class="inner">
+        <div class="copy">
+          <div class="eyebrow">Eletrônicos · Áudio · Tecnologia</div>
+          <h1>Achados da Amazon com até <span class="accent">60% OFF</span></h1>
+          <a class="cta" href="#flash">Ver ofertas em destaque &rarr;</a>
+        </div>
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 38V32a18 18 0 0136 0v6"/>
+            <rect x="8" y="36" width="12" height="20" rx="5"/>
+            <rect x="44" y="36" width="12" height="20" rx="5"/>
+          </svg>
+        </div>
+      </div>
     </section>
 
-    <h2 class="section-title">Ofertas em destaque</h2>
+    <!-- Flash sales -->
+    <div class="sec-head" id="flash">
+      <div class="sec-tag"><i></i><span>Hoje</span></div>
+      <div class="flash-row">
+        <h2>Ofertas Relâmpago</h2>
+        <div class="countdown" aria-label="Tempo restante das ofertas">
+          <div class="unit"><b id="cd-d">00</b><small>Dias</small></div>
+          <div class="colon">:</div>
+          <div class="unit"><b id="cd-h">00</b><small>Horas</small></div>
+          <div class="colon">:</div>
+          <div class="unit"><b id="cd-m">00</b><small>Min</small></div>
+          <div class="colon">:</div>
+          <div class="unit"><b id="cd-s">00</b><small>Seg</small></div>
+        </div>
+      </div>
+    </div>
+
     <div class="grid">
 
-      <div class="card">
-        <span class="badge">-60%</span>
-        <h3><a href="post-philips-tat1209.html">Fone TWS Philips TAT1209BK</a></h3>
-        <div class="price"><span class="old">R$ 249,00</span><span class="now">R$ 99,90</span></div>
-        <p>Fone sem fio com boa autonomia e resistência à água, ideal para o dia a dia por um preço difícil de achar.</p>
-        <div class="actions">
-          <a href="post-philips-tat1209.html">Ler análise →</a>
+      <!-- Philips TAT1209 -->
+      <div class="product">
+        <div class="thumb">
+          <span class="badge">-60%</span>
+          <div class="icons"><span>&#9825;</span><span>&#128065;</span></div>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 14c-5 0-9 6-9 14s3 12 7 12c3 0 4-2 4-6V20c0-4-1-6-2-6z"/>
+            <path d="M42 14c5 0 9 6 9 14s-3 12-7 12c-3 0-4-2-4-6V20c0-4 1-6 2-6z"/>
+          </svg>
+          <a class="add-cart" href="post-philips-tat1209.html">Ver oferta</a>
+        </div>
+        <div class="info">
+          <h3><a href="post-philips-tat1209.html">Fone TWS Philips TAT1209BK</a></h3>
+          <div class="price"><span class="now">R$ 99,90</span><span class="old">R$ 249,00</span></div>
+          <div class="stars"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="count">(7,2 mil)</span></div>
         </div>
       </div>
 
-      <div class="card">
-        <span class="badge">-44%</span>
-        <h3><a href="post-soundcore-p30i.html">soundcore P30i (Anker)</a></h3>
-        <div class="price"><span class="old">R$ 369,00</span><span class="now">R$ 205,00</span></div>
-        <p>Cancelamento de ruído adaptativo, 45h de bateria e estojo 2-em-1 com suporte para o celular.</p>
-        <div class="actions">
-          <a href="post-soundcore-p30i.html">Ler análise →</a>
+      <!-- soundcore P30i -->
+      <div class="product">
+        <div class="thumb">
+          <span class="badge">-44%</span>
+          <div class="icons"><span>&#9825;</span><span>&#128065;</span></div>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 14c-5 0-9 6-9 14s3 12 7 12c3 0 4-2 4-6V20c0-4-1-6-2-6z"/>
+            <path d="M42 14c5 0 9 6 9 14s-3 12-7 12c-3 0-4-2-4-6V20c0-4 1-6 2-6z"/>
+          </svg>
+          <a class="add-cart" href="post-soundcore-p30i.html">Ver oferta</a>
+        </div>
+        <div class="info">
+          <h3><a href="post-soundcore-p30i.html">soundcore P30i (Anker)</a></h3>
+          <div class="price"><span class="now">R$ 205,00</span><span class="old">R$ 369,00</span></div>
+          <div class="stars"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="count">(32,5 mil)</span></div>
         </div>
       </div>
 
-      <div class="card">
-        <span class="badge">-38%</span>
-        <h3><a href="post-havit-h630bt.html">Headphone Havit H630BT</a></h3>
-        <div class="price"><span class="old">R$ 209,99</span><span class="now">R$ 129,98</span></div>
-        <p>Headphone over-ear com até 55h de bateria — uma das maiores autonomias da faixa de preço.</p>
-        <div class="actions">
-          <a href="post-havit-h630bt.html">Ler análise →</a>
+      <!-- Havit H630BT -->
+      <div class="product">
+        <div class="thumb">
+          <span class="badge">-38%</span>
+          <div class="icons"><span>&#9825;</span><span>&#128065;</span></div>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 38V32a18 18 0 0136 0v6"/>
+            <rect x="8" y="36" width="12" height="20" rx="5"/>
+            <rect x="44" y="36" width="12" height="20" rx="5"/>
+          </svg>
+          <a class="add-cart" href="post-havit-h630bt.html">Ver oferta</a>
+        </div>
+        <div class="info">
+          <h3><a href="post-havit-h630bt.html">Headphone Havit H630BT</a></h3>
+          <div class="price"><span class="now">R$ 129,98</span><span class="old">R$ 209,99</span></div>
+          <div class="stars"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="count">(582)</span></div>
         </div>
       </div>
 
-      <div class="card">
-        <span class="badge">-37%</span>
-        <h3><a href="post-soundcore-r50i.html">soundcore R50i (Anker)</a></h3>
-        <div class="price"><span class="old">R$ 259,00</span><span class="now">R$ 163,00</span></div>
-        <p>Ótimo primeiro fone sem fio: Bluetooth 5.3, graves potentes e 30h de reprodução.</p>
-        <div class="actions">
-          <a href="post-soundcore-r50i.html">Ler análise →</a>
+      <!-- soundcore R50i -->
+      <div class="product">
+        <div class="thumb">
+          <span class="badge">-37%</span>
+          <div class="icons"><span>&#9825;</span><span>&#128065;</span></div>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 14c-5 0-9 6-9 14s3 12 7 12c3 0 4-2 4-6V20c0-4-1-6-2-6z"/>
+            <path d="M42 14c5 0 9 6 9 14s-3 12-7 12c-3 0-4-2-4-6V20c0-4 1-6 2-6z"/>
+          </svg>
+          <a class="add-cart" href="post-soundcore-r50i.html">Ver oferta</a>
+        </div>
+        <div class="info">
+          <h3><a href="post-soundcore-r50i.html">soundcore R50i (Anker)</a></h3>
+          <div class="price"><span class="now">R$ 163,00</span><span class="old">R$ 259,00</span></div>
+          <div class="stars"><span class="s">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></span><span class="count">(2,8 mil)</span></div>
         </div>
       </div>
 
-      <div class="card">
-        <span class="badge">-36%</span>
-        <h3><a href="post-edifier-w600bt.html">Headphone Edifier W600BT</a></h3>
-        <div class="price"><span class="old">R$ 238,16</span><span class="now">R$ 152,90</span></div>
-        <p>Leve, confortável e um dos mais bem avaliados da categoria para ouvir música no dia a dia.</p>
-        <div class="actions">
-          <a href="post-edifier-w600bt.html">Ler análise →</a>
+      <!-- Edifier W600BT -->
+      <div class="product">
+        <div class="thumb">
+          <span class="badge">-36%</span>
+          <div class="icons"><span>&#9825;</span><span>&#128065;</span></div>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 38V32a18 18 0 0136 0v6"/>
+            <rect x="8" y="36" width="12" height="20" rx="5"/>
+            <rect x="44" y="36" width="12" height="20" rx="5"/>
+          </svg>
+          <a class="add-cart" href="post-edifier-w600bt.html">Ver oferta</a>
+        </div>
+        <div class="info">
+          <h3><a href="post-edifier-w600bt.html">Headphone Edifier W600BT</a></h3>
+          <div class="price"><span class="now">R$ 152,90</span><span class="old">R$ 238,16</span></div>
+          <div class="stars"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="count">(4,8 mil)</span></div>
         </div>
       </div>
 
     </div>
+
+    <!-- Categories -->
+    <div class="sec-head">
+      <div class="sec-tag"><i></i><span>Categorias</span></div>
+      <h2>Explore por categoria</h2>
+    </div>
+    <div class="cats">
+      <div class="cat">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 14c-5 0-9 6-9 14s3 12 7 12c3 0 4-2 4-6V20c0-4-1-6-2-6z"/><path d="M42 14c5 0 9 6 9 14s-3 12-7 12c-3 0-4-2-4-6V20c0-4 1-6 2-6z"/></svg>
+        <span>Fones</span>
+      </div>
+      <div class="cat">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 38V32a18 18 0 0136 0v6"/><rect x="8" y="36" width="12" height="20" rx="5"/><rect x="44" y="36" width="12" height="20" rx="5"/></svg>
+        <span>Headphones</span>
+      </div>
+      <div class="cat">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="8" width="28" height="48" rx="5"/><line x1="28" y1="14" x2="36" y2="14"/></svg>
+        <span>Smartphones</span>
+      </div>
+      <div class="cat">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="14" width="48" height="30" rx="3"/><line x1="22" y1="54" x2="42" y2="54"/></svg>
+        <span>Computadores</span>
+      </div>
+      <div class="cat">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="16" width="24" height="32" rx="6"/><circle cx="32" cy="32" r="7"/><line x1="26" y1="12" x2="38" y2="12"/><line x1="26" y1="52" x2="38" y2="52"/></svg>
+        <span>Smartwatch</span>
+      </div>
+      <div class="cat">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="14" width="44" height="36" rx="6"/><circle cx="32" cy="32" r="9"/></svg>
+        <span>Caixas de som</span>
+      </div>
+    </div>
+
+    <div class="center">
+      <!-- TODO: troque o # pelo link do seu canal do Telegram -->
+      <a class="btn" href="#">Receba todas as ofertas no Telegram</a>
+    </div>
+
   </main>
 
-  <footer class="site">
+  <footer class="site" id="contato">
     <div class="container">
-      <div>
-        Este site participa do Programa de Associados da Amazon.com.br. Podemos receber
-        comissões por compras qualificadas realizadas através dos nossos links, sem custo
-        adicional para você.
+      <div class="cols">
+        <div>
+          <div class="brand">Jota<b style="color:var(--red)">Promos</b></div>
+          <p class="disclosure">
+            Curadoria independente das melhores ofertas da Amazon Brasil. Este site participa
+            do Programa de Associados da Amazon.com.br e pode receber comissões por compras
+            qualificadas realizadas através dos nossos links, sem custo adicional para você.
+          </p>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Acompanhe</h4>
+          <ul>
+            <!-- TODO: link do canal do Telegram -->
+            <li><a href="#">Canal do Telegram</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="note">
-        Preços e disponibilidade são informados a título de referência e podem mudar a
-        qualquer momento na Amazon. Confira sempre o valor atual na página do produto.
+      <div class="copy">
+        © 2026 JotaPromos. Preços e disponibilidade podem mudar a qualquer momento na Amazon —
+        confira sempre o valor atual na página do produto.
       </div>
-      <div>© 2026 Ofertas Relâmpago · <a href="sobre.html">Sobre nós</a></div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      function pad(n) { return String(n).padStart(2, '0'); }
+      function tick() {
+        var now = new Date();
+        var day = now.getDay();        // 0=Dom ... 6=Sáb
+        var add = (8 - day) % 7;        // dias até a próxima segunda
+        if (add === 0) add = 7;
+        var target = new Date(now);
+        target.setDate(now.getDate() + add);
+        target.setHours(0, 0, 0, 0);
+        var diff = Math.max(0, target - now);
+        var d = Math.floor(diff / 86400000); diff -= d * 86400000;
+        var h = Math.floor(diff / 3600000); diff -= h * 3600000;
+        var m = Math.floor(diff / 60000); diff -= m * 60000;
+        var s = Math.floor(diff / 1000);
+        var set = function (id, v) { var el = document.getElementById(id); if (el) el.textContent = pad(v); };
+        set('cd-d', d); set('cd-h', h); set('cd-m', m); set('cd-s', s);
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
 </body>
 </html>
