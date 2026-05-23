@@ -87,7 +87,8 @@ nav.main a:hover, nav.main a.active { border-bottom-color: var(--red); }
   display: flex; align-items: center; justify-content: center; overflow: hidden;
 }
 .product .thumb svg { width: 120px; height: 120px; color: #b9bcc0; transition: transform .3s ease; }
-.product:hover .thumb svg { transform: scale(1.06); }
+.product .thumb img { max-width: 86%; max-height: 86%; object-fit: contain; transition: transform .3s ease; }
+.product:hover .thumb svg, .product:hover .thumb img { transform: scale(1.06); }
 .badge {
   position: absolute; top: 12px; left: 12px; background: var(--red); color: #fff;
   font-size: 0.75rem; font-weight: 500; padding: 4px 12px; border-radius: 4px;
@@ -141,6 +142,7 @@ article.post { padding: 44px 0 8px; max-width: 820px; margin: 0 auto; }
 article.post .layout { display: grid; grid-template-columns: 320px 1fr; gap: 40px; align-items: start; }
 article.post .thumb { position: relative; background: var(--img-bg); border-radius: 4px; height: 320px; display: flex; align-items: center; justify-content: center; }
 article.post .thumb svg { width: 150px; height: 150px; color: #b9bcc0; }
+article.post .thumb img { max-width: 88%; max-height: 88%; object-fit: contain; }
 article.post h1 { font-size: 1.7rem; font-weight: 600; margin-bottom: 14px; line-height: 1.25; }
 article.post .price { margin: 14px 0 20px; }
 article.post .price .now { font-size: 1.5rem; }
