@@ -106,6 +106,7 @@ nav.main a:hover, nav.main a.active { border-bottom-color: var(--red); }
 .product:hover .add-cart { transform: translateY(0); }
 .product .info { padding: 16px 2px 0; }
 .product .info h3 { font-size: 1rem; font-weight: 500; margin-bottom: 8px; line-height: 1.35; }
+.product .info .sub, article.post .sub { color: var(--muted); font-size: 0.9rem; margin: 0 0 4px; }
 .product:hover .info h3 { color: var(--red); }
 .price { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
 .price .now { color: var(--red); font-weight: 600; font-size: 1.05rem; }

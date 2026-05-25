@@ -1,29 +1,31 @@
 # JotaPromos — site estático
 
-Static deals website (brand: **JotaPromos**) built to apply for the Amazon Associates
-program and to serve as the public showcase for the Telegram deals channel.
+Static deals/curation website (brand: **JotaPromos**) for the Amazon Associates program and
+as the public showcase for the Telegram channel (https://t.me/jotapromosbr).
 
-Design inspired by the "Exclusive" e-commerce UI kit: white background, red accent
-(`#db4444`), Poppins typography, a flash-sale section with countdown, product cards and a
-dark footer. Plain HTML/CSS + a tiny inline countdown script — no build step.
+Plain HTML/CSS, no build step. Pages: `index.html`, `sobre.html`, `post-*.html`, `style.css`.
 
-Pages:
+## Compliance notes (important)
 
-- `index.html` — home: hero, flash-sale deals with countdown, categories, footer
-- `sobre.html` — about page (who we are + affiliate disclosure)
-- `post-*.html` — one article per deal, with original content
-- `style.css` — styles
+To follow the Amazon Associates Program Policies, this site is intentionally **lean**:
 
-## Publish (GitHub Pages)
+- **No hardcoded prices, scraped images or star ratings.** Those may only be displayed when
+  fetched live via the Product Advertising API (PA API) / SiteStripe, with a Brasília
+  date/time stamp and the required legal disclaimer, refreshed at least every 24h.
+- Each product shows: name + original review text + a **"Ver na Amazon"** button whose link
+  carries the affiliate tag `?tag=jotapromos-20`.
+- The required affiliate disclosure ("Como participante do Programa de Associados da Amazon,
+  sou remunerado pelas compras qualificadas efetuadas") appears in the footer of every page.
+- No price-tracking / price-alert feature is exposed to users (policy clause "y"): the site
+  is editorial curation, not a price tracker.
 
-The repository must be **public** for free GitHub Pages. After pushing, enable Pages with
-source = branch `main`, folder `/ (root)`. The site is served at
-`https://<user>.github.io/<repo>/`.
+## Roadmap
 
-## Before going live / after Associates approval
+After Associates approval + PA API access, the bot (`amazon-deals-bot`) can populate prices,
+images and ratings **via PA API** (with timestamp + disclaimer) so the cards/posts show that
+data compliantly.
 
-- Replace every `#` placeholder on the Telegram buttons/links with your channel URL,
-  e.g. `https://t.me/yourchannel` (search for `TODO` in the HTML).
-- After approval, append your affiliate tag to each product link, e.g.
-  `https://www.amazon.com.br/dp/ASIN?tag=yourtag-20` (see the TODO comments in each post).
-- Prices shown are references captured on 2026-05-21 and should be reviewed periodically.
+## Publish
+
+GitHub Pages, public repo, source = branch `main`, folder `/ (root)`. Live at
+https://joaogalhard0.github.io/jotapromos/
